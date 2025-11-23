@@ -1,5 +1,7 @@
+import BookCatalog from "./components/pages/BookCatalog";
+
 const App = () => {
-  return <div>App</div>;
+  return <BookCatalog />;
 };
 
 export default App;
