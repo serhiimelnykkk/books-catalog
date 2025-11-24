@@ -1,3 +1,5 @@
+import styles from "./BookCard.module.css";
+
 interface BookCardProps {
   bookCoverSrc: string;
   bookCoverAlt: string;
@@ -6,9 +8,9 @@ interface BookCardProps {
 
 const BookCard = ({ bookCoverSrc, bookCoverAlt, bookName }: BookCardProps) => {
   return (
-    <div>
-      <img src={bookCoverSrc} alt={bookCoverAlt} />
-      <p>{bookName}</p>
+    <div className={styles.div}>
+      <img className={styles.img} src={bookCoverSrc} alt={bookCoverAlt} />
+      <p className={styles.p}>{bookName}</p>
     </div>
   );
 };
