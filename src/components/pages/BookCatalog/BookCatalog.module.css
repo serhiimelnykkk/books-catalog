@@ -2,15 +2,32 @@
   --num-rows: 7
 }
 
-.wrapper {
+.wrapper_main {
   max-width: 1600px;
   margin: 0 auto;
+}
+
+.wrapper_empty {
+  max-width: 1600px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 section {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+}
+
+.message {
+  font-size: 1rem;
+  border: 1px dashed #909090;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: gray;
 }
 
 section * {
