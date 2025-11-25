@@ -2,14 +2,13 @@
   --num-rows: 7
 }
 
-.wrapper_main {
+.wrapper_main,
+.wrapper_empty {
   max-width: 1600px;
   margin: 0 auto;
 }
 
 .wrapper_empty {
-  max-width: 1600px;
-  margin: 0 auto;
   min-height: 100vh;
   display: flex;
   align-items: center;
