@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import BookCard from "../../common/BookCard/BookCard";
 import temporaryStorage from "../../../storage/temp";
 import styles from "./BookCatalog.module.css";
