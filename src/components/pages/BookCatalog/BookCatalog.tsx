@@ -9,7 +9,7 @@ interface BookCatalogProps {
 }
 
 const BookCatalog = ({ showFavoritesOnly }: BookCatalogProps) => {
-  const [bookIds, setBookIds] = useState<string[]>(
+  const [bookIds, setBookIds] = useState<number[]>(
     JSON.parse(localStorage.getItem("bookIds") || "[]")
   );
 
@@ -18,8 +18,16 @@ const BookCatalog = ({ showFavoritesOnly }: BookCatalogProps) => {
     localStorage.setItem("bookIds", newBookIds);
   }, [bookIds]);
 
+  const toggleFavorite = (bookId: number) => {
+    setBookIds((prev) =>
+      prev.includes(bookId)
+        ? prev.filter((id) => id !== bookId)
+        : [...prev, bookId]
+    );
+  };
+
   const storageToMap = showFavoritesOnly
-    ? temporaryStorage.filter((book) => bookIds.includes(book.id.toString()))
+    ? temporaryStorage.filter((book) => bookIds.includes(book.id))
     : temporaryStorage;
 
   return (
@@ -34,8 +42,8 @@ const BookCatalog = ({ showFavoritesOnly }: BookCatalogProps) => {
                 bookName={book.name}
                 bookCoverSrc={book.coverName}
                 bookCoverAlt={book.name}
-                bookIds={bookIds}
-                onBookIdsChange={setBookIds}
+                isFavorite={bookIds.includes(book.id)}
+                onToggleFavorite={toggleFavorite}
               />
             ))}
           </section>
