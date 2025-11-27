@@ -1,41 +1,34 @@
-import { useEffect, useState } from "react";
 import BookCard from "../../common/BookCard/BookCard";
 import temporaryStorage from "../../../storage/temp";
 import styles from "./BookCatalog.module.css";
 import { Link } from "react-router";
+import useFavorites from "./hooks/useFavorites";
 
 interface BookCatalogProps {
   showFavoritesOnly?: boolean;
 }
 
 const BookCatalog = ({ showFavoritesOnly }: BookCatalogProps) => {
-  const [bookIds, setBookIds] = useState<string[]>(
-    JSON.parse(localStorage.getItem("bookIds") || "[]")
-  );
+  const { favorites, toggleFavorite } = useFavorites();
 
-  useEffect(() => {
-    const newBookIds = JSON.stringify(bookIds);
-    localStorage.setItem("bookIds", newBookIds);
-  }, [bookIds]);
-
-  const storageToMap = showFavoritesOnly
-    ? temporaryStorage.filter((book) => bookIds.includes(book.id.toString()))
+  const books = showFavoritesOnly
+    ? temporaryStorage.filter((book) => favorites.includes(book.id))
     : temporaryStorage;
 
   return (
     <>
-      {storageToMap.length > 0 ? (
+      {books.length > 0 ? (
         <div className={styles.wrapper_main}>
           <section className={styles.section}>
-            {storageToMap.map((book) => (
+            {books.map((book) => (
               <BookCard
                 key={book.id}
                 bookId={book.id}
                 bookName={book.name}
                 bookCoverSrc={book.coverName}
                 bookCoverAlt={book.name}
-                bookIds={bookIds}
-                onBookIdsChange={setBookIds}
+                isFavorite={favorites.includes(book.id)}
+                onToggleFavorite={toggleFavorite}
               />
             ))}
           </section>
