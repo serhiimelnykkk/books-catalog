@@ -18,10 +18,17 @@ const BookCard = ({
   onToggleFavorite,
 }: BookCardProps) => {
   return (
-    <div className={styles.div}>
-      <img className={styles.img} src={bookCoverSrc} alt={bookCoverAlt} />
-      <p className={styles.p}>{bookName}</p>
-      <button className={styles.btn} onClick={() => onToggleFavorite(bookId)}>
+    <div className={styles.book_wrapper}>
+      <img
+        className={styles.book_cover}
+        src={bookCoverSrc}
+        alt={bookCoverAlt}
+      />
+      <p className={styles.book_name}>{bookName}</p>
+      <button
+        className={styles.add_favorite_btn}
+        onClick={() => onToggleFavorite(bookId)}
+      >
         {isFavorite ? "Remove from Favorites" : "Add to Favorites"}
       </button>
     </div>
