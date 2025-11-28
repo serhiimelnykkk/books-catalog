@@ -19,8 +19,8 @@
 
 .message_empty {
   font-size: 1rem;
-  border: 1px dashed #909090;
+  border: 1px dashed var(--color-border);
   border-radius: 5px;
   padding: 5px 10px;
-  color: gray;
+  color: var(--color-text-secondary);
 }
