@@ -1,6 +1,6 @@
 .wrapper_main,
 .wrapper_empty {
-  max-width: 1600px;
+  max-width: var(--content-width);
   margin: 0 auto;
 }
 

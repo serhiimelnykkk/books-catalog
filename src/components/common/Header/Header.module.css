@@ -7,7 +7,7 @@
 }
 
 .header {
-  max-width: 1600px;
+  max-width: var(--content-width);
   min-height: var(--header-height);
   margin: 0 auto;
   display: flex;
