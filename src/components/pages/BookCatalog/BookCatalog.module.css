@@ -11,13 +11,13 @@
   justify-content: center;
 }
 
-section {
+.book_catalog {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
-.message {
+.message_empty {
   font-size: 1rem;
   border: 1px dashed #909090;
   border-radius: 5px;

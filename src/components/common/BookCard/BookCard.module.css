@@ -1,16 +1,16 @@
-.div {
+.book_wrapper {
   display: flex;
   flex-direction: column;
   padding: 10px;
   gap: 10px;
 }
 
-.img {
+.book_cover {
   width: 100%;
   align-self: center;
 }
 
-.p {
+.book_name {
   --line-clamp: 2;
   --line-height: 1.2;
   --font-size: 1.2rem;
@@ -28,7 +28,7 @@
   overflow-wrap: anywhere;
 }
 
-.btn {
+.add_favorite_btn {
   align-self: flex-start;
   padding: 5px 10px;
 }

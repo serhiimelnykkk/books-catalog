@@ -19,7 +19,7 @@ const BookCatalog = ({ showFavoritesOnly }: BookCatalogProps) => {
     <>
       {books.length > 0 ? (
         <div className={styles.wrapper_main}>
-          <section className={styles.section}>
+          <section className={styles.book_catalog}>
             {books.map((book) => (
               <BookCard
                 key={book.id}
@@ -36,7 +36,7 @@ const BookCatalog = ({ showFavoritesOnly }: BookCatalogProps) => {
       ) : (
         <div className={styles.wrapper_empty}>
           {showFavoritesOnly ? (
-            <p className={styles.message}>
+            <p className={styles.message_empty}>
               No books here. Return to{" "}
               <Link to="/" className={styles.return_to_catalog}>
                 catalog
@@ -44,7 +44,7 @@ const BookCatalog = ({ showFavoritesOnly }: BookCatalogProps) => {
               to add some
             </p>
           ) : (
-            <p className={styles.message}>No books available</p>
+            <p className={styles.message_empty}>No books available</p>
           )}
         </div>
       )}
