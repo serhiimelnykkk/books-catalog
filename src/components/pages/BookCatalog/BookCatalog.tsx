@@ -25,7 +25,7 @@ const BookCatalog = ({ showFavoritesOnly }: BookCatalogProps) => {
                 key={book.id}
                 bookId={book.id}
                 bookName={book.name}
-                bookCoverSrc={book.coverName}
+                bookCoverSrc={book.coverPath}
                 bookCoverAlt={book.name}
                 isFavorite={favorites.includes(book.id)}
                 onToggleFavorite={toggleFavorite}

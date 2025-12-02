@@ -1,38 +1,61 @@
-const temporaryStorage = [
+import type { Book } from "../types";
+
+const temporaryStorage: Book[] = [
   {
     id: 1,
     name: "1984",
-    coverName: "/images/1984.jpg",
+    coverPath: "/images/1984.jpg",
+    author: "George Orwell",
+    year_published: 1984,
+    genres: ["Classics", "Dystopia", "Fiction", "Politics"],
   },
   {
     id: 2,
     name: "The Catcher In The Rye The Catcher In The Rye",
-    coverName: "/images/the_catcher_in_the_rye.jpg",
+    coverPath: "/images/the_catcher_in_the_rye.jpg",
+    author: "J.D. Salinger",
+    year_published: 1951,
+    genres: ["Classics", "Fiction"],
   },
   {
     id: 3,
     name: "The Great Gatsby",
-    coverName: "/images/the_great_gatsby.jpg",
+    coverPath: "/images/the_great_gatsby.jpg",
+    author: "F. Scott Fitzgerald",
+    year_published: 1925,
+    genres: ["Classics", "Fiction", "Historical Fiction", "Romance"],
   },
   {
     id: 4,
     name: "To Kill A Mockingbird",
-    coverName: "/images/to_kill_a_mockingbird.jpg",
+    coverPath: "/images/to_kill_a_mockingbird.jpg",
+    author: "Harper Lee",
+    year_published: 1960,
+    genres: ["Classics", "Fiction", "Historical Fiction"],
   },
   {
     id: 5,
     name: "Animal Farm",
-    coverName: "/images/animal_farm.jpg",
+    coverPath: "/images/animal_farm.jpg",
+    author: "George Orwell",
+    year_published: 1945,
+    genres: ["Classics", "Fiction", "Dystopia", "Politics", "Fantasy"],
   },
   {
     id: 6,
     name: "East of Eaden",
-    coverName: "/images/east_of_eaden.jpg",
+    coverPath: "/images/east_of_eaden.jpg",
+    author: "John Steinbeck",
+    year_published: 1952,
+    genres: ["Classics", "Fiction", "Historical Fiction"],
   },
   {
     id: 7,
     name: "Fahrenheit 451",
-    coverName: "/images/fahrenheit_451.jpg",
+    coverPath: "/images/fahrenheit_451.jpg",
+    author: "Ray Bradbury",
+    year_published: 1953,
+    genres: ["Classics", "Fiction", "Science Fiction"],
   },
 ];
 
