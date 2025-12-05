@@ -29,6 +29,18 @@
   overflow-wrap: anywhere;
 }
 
+.book_author,
+.book_year_published,
+.book_genres {
+  --font-size: 0.8rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+
+  font-size: var(--font-size);
+  color: var(--color-text-secondary);
+}
+
 .add_favorite_btn {
   align-self: flex-start;
   padding: 5px 10px;
