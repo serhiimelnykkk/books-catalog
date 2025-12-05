@@ -23,10 +23,7 @@ const BookCatalog = ({ showFavoritesOnly }: BookCatalogProps) => {
             {books.map((book) => (
               <BookCard
                 key={book.id}
-                bookId={book.id}
-                bookName={book.name}
-                bookCoverSrc={book.coverName}
-                bookCoverAlt={book.name}
+                book={book}
                 isFavorite={favorites.includes(book.id)}
                 onToggleFavorite={toggleFavorite}
               />
