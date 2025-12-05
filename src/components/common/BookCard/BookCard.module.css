@@ -17,6 +17,7 @@
 
   line-height: var(--line-height);
   font-size: var(--font-size);
+  font-weight: normal;
 
   display: -webkit-box;
   -webkit-box-orient: vertical;
