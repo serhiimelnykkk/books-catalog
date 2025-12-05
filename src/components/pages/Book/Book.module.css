@@ -1,0 +1,46 @@
+.wrapper {
+  display: flex;
+  max-width: var(--content-width);
+  padding: 10px;
+  margin: 0 auto;
+  gap: 10px;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.text_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  flex: 1;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.book_name {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.book_author_and_year {
+  color: var(--color-text-secondary);
+  font-weight: normal;
+  font-style: italic;
+}
+
+.genres_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.genre {
+  padding: 5px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+}
