@@ -11,7 +11,7 @@ const temporaryStorage: Book[] = [
   },
   {
     id: 2,
-    name: "The Catcher In The Rye The Catcher In The Rye",
+    name: "The Catcher In The Rye",
     coverPath: "/images/the_catcher_in_the_rye.jpg",
     author: "J.D. Salinger",
     year_published: 1951,
