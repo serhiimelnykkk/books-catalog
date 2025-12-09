@@ -7,13 +7,16 @@
 
 .book_cover {
   width: 100%;
-  align-self: center;
+  aspect-ratio: 1 / 1.5;
+  object-fit: cover;
 }
 
 .book_name {
   --line-clamp: 2;
   --line-height: 1.2;
   --font-size: 1.2rem;
+
+  color: var(--color-text-primary);
 
   line-height: var(--line-height);
   font-size: var(--font-size);

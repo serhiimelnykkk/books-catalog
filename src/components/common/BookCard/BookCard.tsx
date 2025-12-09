@@ -1,5 +1,6 @@
 import type { Book } from "../../../types";
 import styles from "./BookCard.module.css";
+import { Link } from "react-router";
 
 interface BookCardProps {
   book: Book;
@@ -10,8 +11,14 @@ interface BookCardProps {
 const BookCard = ({ book, isFavorite, onToggleFavorite }: BookCardProps) => {
   return (
     <div className={styles.book_wrapper}>
-      <img className={styles.book_cover} src={book.coverPath} alt={book.name} />
-      <h4 className={styles.book_name}>{book.name}</h4>
+      <Link to={`/books/${book.id}`} style={{ textDecoration: "none" }}>
+        <img
+          className={styles.book_cover}
+          src={book.coverPath}
+          alt={book.name}
+        />
+        <h4 className={styles.book_name}>{book.name}</h4>
+      </Link>
       <div>
         <p className={styles.book_author}>{book.author}</p>
         <p className={styles.book_year_published}>{book.year_published}</p>

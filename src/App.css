@@ -27,6 +27,10 @@ button {
   cursor: pointer;
 }
 
+img {
+  display: block;
+}
+
 body {
   margin-top: var(--header-height);
   font-family: var(--ff-primary);
