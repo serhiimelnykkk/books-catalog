@@ -21,7 +21,11 @@ const BookCatalog = ({ showFavoritesOnly }: BookCatalogProps) => {
     ? temporaryStorage.filter((book) => favorites.includes(book.id))
     : temporaryStorage;
 
-  const { register, watch } = useForm<Book>();
+  const { register, watch, reset } = useForm<Book>({
+    defaultValues: {
+      genres: [],
+    },
+  });
 
   const filterValues = watch();
 
@@ -46,8 +50,8 @@ const BookCatalog = ({ showFavoritesOnly }: BookCatalogProps) => {
   }, [debouncedJson, books]);
 
   return (
-    <>
-      <Filters register={register} />
+    <main className={styles.catalog_wrapper}>
+      <Filters register={register} reset={reset} />
 
       {filteredBooks.length > 0 ? (
         <div className={styles.wrapper_main}>
@@ -77,7 +81,7 @@ const BookCatalog = ({ showFavoritesOnly }: BookCatalogProps) => {
           )}
         </div>
       )}
-    </>
+    </main>
   );
 };
 
