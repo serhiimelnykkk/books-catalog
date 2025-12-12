@@ -3,11 +3,12 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router";
 import useDebounce from "../../../hooks/useDebounce";
 import temporaryStorage from "../../../storage/temp";
-import { GENRES, type Book } from "../../../types";
+import { type Book } from "../../../types";
 import BookCard from "../../common/BookCard/BookCard";
 import styles from "./BookCatalog.module.css";
 import filters from "./filters";
 import useFavorites from "./hooks/useFavorites";
+import Filters from "./Filters/Filters";
 
 interface BookCatalogProps {
   showFavoritesOnly?: boolean;
@@ -46,20 +47,8 @@ const BookCatalog = ({ showFavoritesOnly }: BookCatalogProps) => {
 
   return (
     <>
-      <form>
-        <input type="text" placeholder="book name" {...register("name")} />
-        <input type="text" placeholder="book author" {...register("author")} />
-        <input
-          type="text"
-          placeholder="book year published"
-          {...register("year_published", { valueAsNumber: true })}
-        />
-        <select multiple {...register("genres")}>
-          {GENRES.map((genre) => (
-            <option key={genre}>{genre}</option>
-          ))}
-        </select>
-      </form>
+      <Filters register={register} />
+
       {filteredBooks.length > 0 ? (
         <div className={styles.wrapper_main}>
           <section className={styles.book_catalog}>
