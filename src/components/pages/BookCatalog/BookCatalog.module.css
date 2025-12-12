@@ -1,7 +1,13 @@
-.wrapper_main,
-.wrapper_empty {
+.catalog_wrapper {
+  display: flex;
   max-width: var(--content-width);
   margin: 0 auto;
+  padding: 10px;
+}
+
+.wrapper_main,
+.wrapper_empty {
+  flex: 1;
 }
 
 .wrapper_empty {

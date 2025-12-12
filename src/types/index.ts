@@ -1,12 +1,15 @@
-export type Genre =
-  | "Classics"
-  | "Fiction"
-  | "Science Fiction"
-  | "Historical Fiction"
-  | "Dystopia"
-  | "Politics"
-  | "Romance"
-  | "Fantasy";
+export const GENRES = [
+  "Classics",
+  "Fiction",
+  "Science Fiction",
+  "Historical Fiction",
+  "Dystopia",
+  "Politics",
+  "Romance",
+  "Fantasy",
+] as const;
+
+export type Genre = (typeof GENRES)[number];
 
 export interface Book {
   id: number;

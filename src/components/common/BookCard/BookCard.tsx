@@ -27,10 +27,10 @@ const BookCard = ({ book, isFavorite, onToggleFavorite }: BookCardProps) => {
         {book.genres
           .sort((a, b) => a.localeCompare(b))
           .map((genre, index, array) => (
-            <>
+            <span key={genre}>
               {genre}
               {index !== array.length - 1 && <> &middot; </>}
-            </>
+            </span>
           ))}
       </p>
       <button
