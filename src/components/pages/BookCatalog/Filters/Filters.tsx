@@ -2,6 +2,8 @@ import { GENRES } from "../../../../types";
 import type { UseFormRegister, UseFormReset } from "react-hook-form";
 import type { Book } from "../../../../types";
 import styles from "./Filters.module.css";
+import Button from "../../../common/Button/Button";
+import InputText from "../../../common/InputText/InputText";
 
 interface FiltersProps {
   register: UseFormRegister<Book>;
@@ -13,21 +15,21 @@ const Filters = ({ register, reset }: FiltersProps) => {
     <form className={styles.filters_form}>
       <h4>Filters</h4>
       <label htmlFor="name">Name</label>
-      <input
+      <InputText
         className={styles.input_text}
         type="text"
         placeholder="...The Great Gatsby"
         {...register("name")}
       />
       <label htmlFor="author">Author</label>
-      <input
+      <InputText
         className={styles.input_text}
         type="text"
         placeholder="...George Orwell"
         {...register("author")}
       />
       <label htmlFor="year_published">Year published</label>
-      <input
+      <InputText
         className={styles.input_text}
         type="text"
         placeholder="...1905"
@@ -47,13 +49,9 @@ const Filters = ({ register, reset }: FiltersProps) => {
           </label>
         ))}
       </section>
-      <button
-        className={styles.reset_btn}
-        onClick={() => reset()}
-        type="button"
-      >
+      <Button onClick={() => reset()} type="button">
         Reset filters
-      </button>
+      </Button>
     </form>
   );
 };

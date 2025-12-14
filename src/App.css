@@ -2,6 +2,21 @@
   --header-height: 60px;
   --content-width: 1600px;
 
+  --ff-primary: "Outfit", sans-serif;
+
+  --color-orange-90: hsl(22 80% 90%);
+  --color-orange-80: hsl(22 80% 80%);
+  --color-orange-70: hsl(22 80% 70%);
+  --color-orange-60: hsl(22 80% 60%);
+  --color-orange-50: hsl(22 80% 50%);
+  --color-orange-40: hsl(22 80% 40%);
+  --color-orange-30: hsl(22 80% 30%);
+
+  --color-accent-primary: var(--color-orange-50);
+  --color-accent-text-primary: var(--color-orange-90);
+  --color-accent-border: var(--color-orange-40);
+  --color-accent-border-secondary: var(--color-orange-50);
+
   --color-primary: white;
   --color-secondary: rgb(40, 40, 40);
 
@@ -10,8 +25,6 @@
   --color-text-tertiary: rgb(220, 220, 220);
 
   --color-border: rgb(185, 185, 185);
-
-  --ff-primary: "Outfit", sans-serif;
 }
 
 *,

@@ -1,6 +1,7 @@
 import type { Book } from "../../../types";
 import styles from "./BookCard.module.css";
 import { Link } from "react-router";
+import Button from "../Button/Button";
 
 interface BookCardProps {
   book: Book;
@@ -33,12 +34,9 @@ const BookCard = ({ book, isFavorite, onToggleFavorite }: BookCardProps) => {
             </span>
           ))}
       </p>
-      <button
-        className={styles.add_favorite_btn}
-        onClick={() => onToggleFavorite(book.id)}
-      >
+      <Button onClick={() => onToggleFavorite(book.id)} variant="secondary">
         {isFavorite ? "Remove from Favorites" : "Add to Favorites"}
-      </button>
+      </Button>
     </div>
   );
 };
