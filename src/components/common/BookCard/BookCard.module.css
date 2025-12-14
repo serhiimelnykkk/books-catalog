@@ -46,8 +46,3 @@
   font-size: var(--font-size);
   color: var(--color-text-secondary);
 }
-
-.add_favorite_btn {
-  align-self: flex-start;
-  padding: 5px 10px;
-}
