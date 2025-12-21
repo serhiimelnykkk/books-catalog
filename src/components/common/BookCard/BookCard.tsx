@@ -25,7 +25,7 @@ const BookCard = ({ book, isFavorite, onToggleFavorite }: BookCardProps) => {
         <p className={styles.book_year_published}>{book.year_published}</p>
       </div>
       <p className={styles.book_genres}>
-        {book.genres
+        {[...book.genres]
           .sort((a, b) => a.localeCompare(b))
           .map((genre, index, array) => (
             <span key={genre}>
