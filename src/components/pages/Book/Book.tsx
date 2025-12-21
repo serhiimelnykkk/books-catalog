@@ -26,10 +26,13 @@ const Book = () => {
           {book.author} &middot; {book.year_published}
         </h3>
         <section className={styles.genres_wrapper}>
-          {book.genres
+          {[...book.genres]
             .sort((a, b) => a.localeCompare(b))
             .map((genre) => (
-              <p className={styles.genre}> {genre} </p>
+              <p key={genre} className={styles.genre}>
+                {" "}
+                {genre}{" "}
+              </p>
             ))}
         </section>
       </article>
