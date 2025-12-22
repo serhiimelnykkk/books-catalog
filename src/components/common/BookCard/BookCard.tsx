@@ -34,7 +34,11 @@ const BookCard = ({ book, isFavorite, onToggleFavorite }: BookCardProps) => {
             </span>
           ))}
       </p>
-      <Button onClick={() => onToggleFavorite(book.id)} variant="secondary">
+      <Button
+        onClick={() => onToggleFavorite(book.id)}
+        variant="secondary"
+        className={styles.add_favorite_btn}
+      >
         {isFavorite ? "Remove from Favorites" : "Add to Favorites"}
       </Button>
     </div>

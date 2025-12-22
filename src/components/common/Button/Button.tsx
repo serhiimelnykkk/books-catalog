@@ -6,11 +6,11 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary";
 }
 
-const Button = ({ variant, children, ...props }: ButtonProps) => {
+const Button = ({ variant, children, className, ...rest }: ButtonProps) => {
   return (
     <button
-      {...props}
-      className={styles.btn}
+      {...rest}
+      className={`${className} ${styles.btn}`}
       data-variant={variant || "primary"}
     >
       {children}
