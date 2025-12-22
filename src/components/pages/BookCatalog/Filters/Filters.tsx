@@ -8,12 +8,32 @@ import InputText from "../../../common/InputText/InputText";
 interface FiltersProps {
   register: UseFormRegister<Book>;
   reset: UseFormReset<Book>;
+  onClose: (...args: unknown[]) => unknown;
+  isCloseButtonVisible: boolean;
 }
 
-const Filters = ({ register, reset }: FiltersProps) => {
+const Filters = ({
+  register,
+  reset,
+  onClose,
+  isCloseButtonVisible,
+}: FiltersProps) => {
   return (
     <form className={styles.filters_form}>
-      <h4>Filters</h4>
+      <div className={styles.filter_title_wrapper}>
+        <h4>Filters</h4>
+        <Button
+          variant="secondary"
+          onClick={onClose}
+          hidden={isCloseButtonVisible}
+          type="button"
+        >
+          Close
+        </Button>
+      </div>
+      <Button onClick={() => reset()} type="button">
+        Reset filters
+      </Button>
       <label htmlFor="name">Name</label>
       <InputText
         className={styles.input_text}
@@ -49,9 +69,6 @@ const Filters = ({ register, reset }: FiltersProps) => {
           </label>
         ))}
       </section>
-      <Button onClick={() => reset()} type="button">
-        Reset filters
-      </Button>
     </form>
   );
 };

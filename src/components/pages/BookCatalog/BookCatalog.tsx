@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router";
 import useDebounce from "../../../hooks/useDebounce";
@@ -9,6 +9,8 @@ import styles from "./BookCatalog.module.css";
 import filters from "./filters";
 import useFavorites from "./hooks/useFavorites";
 import Filters from "./Filters/Filters";
+import useMediaQuery from "../../../hooks/useMediaQuery";
+import Button from "../../common/Button/Button";
 
 interface BookCatalogProps {
   showFavoritesOnly?: boolean;
@@ -49,12 +51,42 @@ const BookCatalog = ({ showFavoritesOnly }: BookCatalogProps) => {
     );
   }, [debouncedJson, books]);
 
+  const isMobile = useMediaQuery("(width <= 1024px)");
+
+  const [areMobileFiltersVisible, setAreFiltersVisible] = useState(false);
+
+  useEffect(() => {
+    setAreFiltersVisible(false);
+  }, [isMobile]);
+
   return (
     <main className={styles.catalog_wrapper}>
-      <Filters register={register} reset={reset} />
+      {(!isMobile || areMobileFiltersVisible) && (
+        <nav
+          className={`${styles.filters_wrapper}
+            ${areMobileFiltersVisible ? styles.filters_wrapper_mobile : ""}
+              `}
+        >
+          <Filters
+            register={register}
+            reset={reset}
+            onClose={() => setAreFiltersVisible(false)}
+            isCloseButtonVisible={!areMobileFiltersVisible}
+          />
+        </nav>
+      )}
 
       {filteredBooks.length > 0 ? (
         <div className={styles.wrapper_main}>
+          {isMobile && (
+            <nav className={styles.mobile_filters_navbar}>
+              <Button
+                onClick={() => setAreFiltersVisible(!areMobileFiltersVisible)}
+              >
+                Filters
+              </Button>
+            </nav>
+          )}
           <section className={styles.book_catalog}>
             {filteredBooks.map((book) => (
               <BookCard
