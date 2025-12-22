@@ -30,6 +30,7 @@
   top: var(--header-height);
   align-self: flex-start;
   overflow-y: auto;
+  max-height: calc(100dvh - var(--header-height));
 }
 
 .filters_wrapper_mobile {
@@ -38,8 +39,7 @@
   left: 0;
   bottom: 0;
   z-index: 1;
-  overflow-y: auto;
-  height: 100dvh;
+  max-height: 100dvh;
 }
 
 .book_catalog {
