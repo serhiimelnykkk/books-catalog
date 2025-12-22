@@ -62,13 +62,13 @@ const BookCatalog = ({ showFavoritesOnly }: BookCatalogProps) => {
   return (
     <main className={styles.catalog_wrapper}>
       {(!isMobile || areMobileFiltersVisible) && (
-        <div
+        <nav
           className={`${styles.filters_wrapper}
             ${areMobileFiltersVisible ? styles.filters_wrapper_mobile : ""}
               `}
         >
           <Filters register={register} reset={reset} />
-        </div>
+        </nav>
       )}
 
       {filteredBooks.length > 0 ? (
