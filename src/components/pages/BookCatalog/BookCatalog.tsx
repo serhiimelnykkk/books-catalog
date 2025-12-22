@@ -67,7 +67,12 @@ const BookCatalog = ({ showFavoritesOnly }: BookCatalogProps) => {
             ${areMobileFiltersVisible ? styles.filters_wrapper_mobile : ""}
               `}
         >
-          <Filters register={register} reset={reset} />
+          <Filters
+            register={register}
+            reset={reset}
+            onClose={() => setAreFiltersVisible(false)}
+            isCloseButtonVisible={!areMobileFiltersVisible}
+          />
         </nav>
       )}
 
