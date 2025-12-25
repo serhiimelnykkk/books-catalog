@@ -17,6 +17,7 @@ const BookCard = ({ book, isFavorite, onToggleFavorite }: BookCardProps) => {
           className={styles.book_cover}
           src={book.coverPath}
           alt={book.name}
+          loading="lazy"
         />
         <h4 className={styles.book_name}>{book.name}</h4>
       </Link>
