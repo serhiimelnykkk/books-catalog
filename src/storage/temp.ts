@@ -220,7 +220,7 @@ const temporaryStorage: Book[] = [
   {
     id: 28,
     name: "Fahrenheit 451",
-    coverPath: "/images/fahrenheit_451.jpg",
+    coverPath: "/images/test_lazy.jpg",
     author: "Ray Bradbury",
     year_published: 1953,
     genres: ["Classics", "Fiction", "Science Fiction"],
