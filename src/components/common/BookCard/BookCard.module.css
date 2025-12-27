@@ -9,6 +9,7 @@
 
 .book_cover {
   aspect-ratio: 1 / 1.5;
+  width: 100%;
   max-width: min(200px, 100%);
   justify-self: center;
   object-fit: cover;
