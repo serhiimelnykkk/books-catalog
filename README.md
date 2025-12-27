@@ -2,26 +2,17 @@
 
 A responsive web app that allows users to manage their libraries and discover new books.
 
-[Trello](https://trello.com/invite/b/6917740b559baf89aacf30f9/ATTIe19fed4456d562b0feea16550756e8abD4BBA047/online-books-catalog)
-
-<img here>
+![Main app page](https://github.com/serhiimelnykkk/books-catalog/blob/main/.github/hero.png)
 
 # Motivation
 
 I built this project to learn:
-<ul>
-  <li>
-    Task management for projects, assign, divide and complete tasks, <br>
-    learn a skill of being able to tell technical information in non-technical language <br>
-    to be understanded by all types of users.
-  </li>
-  <li>
-    Git workflow: dividing commits (one task - one commit), conventional commits, one feature - one branch.
-  </li>
-  <li>
-    App responsiveness: grids, auto margins, images, media queries.
-  </li>
-</ul>
+
+* Task management for projects, assign, divide and complete tasks, 
+learn a skill of being able to tell technical information in non-technical language 
+to be understanded by all types of users.
+* Git workflow:** dividing commits (one task - one commit), conventional commits, one feature - one branch.
+* App responsiveness:** grids, auto margins, images, media queries.
 
 # Features
 
@@ -64,5 +55,6 @@ npm run dev
 
 # Key Learnings
 * **Task Management**: I learned to divide tasks, which helped me understand tasks better and keep them written in one place instead of my head. Another part is storytelling to non-technical audience, which is crucial skill to be able to explain hard things for all types of users, which I'm currently developing.
+Check out Trello: [Trello](https://trello.com/invite/b/6917740b559baf89aacf30f9/ATTIe19fed4456d562b0feea16550756e8abD4BBA047/online-books-catalog)
 * **Git Workflow**: I tried to simulate production git workflow, learned to write conventional commits and write changes in a one-minifeature way. Each branch is responsible for one assignment in Trello.
 * **Responsive App**: Making app responsive introduced some intersting challanges, particularly to make elements scrollable and keep layout from shifts in the same time on all devices, which was solved using ```overflow``` and ```scrollbar-gutter``` CSS properties.
