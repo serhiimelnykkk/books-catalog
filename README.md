@@ -63,5 +63,6 @@ npm run dev
 * Open browser and enter "localhost:5173" into address bar
 
 # Key Learnings
-* **Task Management**: I learned to divide tasks, which helped me understand tasks better and keep them written in one place instead of my head. Another part is storytelling to non-technical audience, which is crucial skill to be able to explain hard things for all types of users.
+* **Task Management**: I learned to divide tasks, which helped me understand tasks better and keep them written in one place instead of my head. Another part is storytelling to non-technical audience, which is crucial skill to be able to explain hard things for all types of users, which I'm currently developing.
 * **Git Workflow**: I tried to simulate production git workflow, learned to write conventional commits and write changes in a one-minifeature way. Each branch is responsible for one assignment in Trello.
+* **Responsive App**: Making app responsive introduced some intersting challanges, particularly to make elements scrollable and keep layout from shifts in the same time on all devices, which was solved using ```overflow``` and ```scrollbar-gutter``` CSS properties.
