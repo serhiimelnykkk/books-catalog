@@ -9,7 +9,8 @@ A responsive web app that allows users to manage their libraries and discover ne
 I built this project to learn:
 
 * Task management for projects, assign, divide and complete tasks, 
-learn a skill of being able to tell technical information in non-technical language 
+learn a skill of being able to tell technical information in non-technical language
+Check out [Trello](https://trello.com/invite/b/6917740b559baf89aacf30f9/ATTIe19fed4456d562b0feea16550756e8abD4BBA047/online-books-catalog), where I performed the management.
 to be understanded by all types of users.
 * Git workflow:** dividing commits (one task - one commit), conventional commits, one feature - one branch.
 * App responsiveness:** grids, auto margins, images, media queries.
